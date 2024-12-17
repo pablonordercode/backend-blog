@@ -14,15 +14,12 @@ const UserSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    password: {
+    mensagem: {
         type: String,
         required: true
     },
-    avatar: {
-        type: String,
 
-    }
 }, { timestamps: true })
 
-const Usuario = mongoose.model("users", UserSchema);
-module.exports = Usuario
+const Mensagem = mongoose.model("mensagens", UserSchema);
+module.exports = Mensagem

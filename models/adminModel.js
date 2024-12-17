@@ -5,10 +5,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    celular: {
-        type: Number,
-        required: true
-    },
+
     email: {
         type: String,
         required: true,
@@ -18,11 +15,13 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    avatar: {
+    image: {
         type: String,
+    
+    },
 
-    }
 }, { timestamps: true })
 
-const Usuario = mongoose.model("users", UserSchema);
-module.exports = Usuario
+const Admin = mongoose.model("admins", UserSchema);
+module.exports = Admin
+
